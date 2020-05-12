@@ -1,0 +1,584 @@
+﻿<!Doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta property="qc:admins" content="465267610762567726375">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Python3 编程第一步 | 菜鸟教程</title>
+
+  <link rel='dns-prefetch' href='//s.w.org'>
+
+<meta name="keywords" content="Python3 编程第一步">
+<meta name="description" content="Python3 编程第一步 在前面的教程中我们已经学习了一些 Python3 的基本语法知识，下面我们尝试来写一个斐波纳契数列。    实例(Python 3.0+)   [mycode3 type=&#039;python&#039;] #!/usr/bin/python3  # Fibonacci series: 斐波纳契数列 # 两个元素的总和确定了下一个数 a, b = 0, 1 while b &lt; 10:     pri..">
+		
+	
+	<link rel="stylesheet" href="/wp-content/themes/runoob/style.css?v=1.155" type="text/css" media="all">	
+		
+  <!--[if gte IE 9]><!-->
+  
+  <!--<![endif]-->
+  <!--[if lt IE 9]>
+     <script src="https://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
+     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+  
+  <meta name="apple-mobile-web-app-title" content="菜鸟教程">
+</head>
+<body>
+
+<!--  头部 -->
+<div class="container logo-search">
+
+  
+
+  
+</div>
+
+
+<!-- 导航栏 -->
+<!-- 导航栏 -->
+<div class="container navigation">
+	<div class="row">
+		<div class="col nav">
+			<ul class="pc-nav"><li><a href='/linux/linux-tutorial.html'>linux</a></li><li><a href='/markdown/md-tutorial.html'>markdown</a></li><li><a href='/docker/docker-tutorial.html'>docker</a></li><li><a href='/mysql/mysql-tutorial.html'>mysql</a></li><li><a href='/sql/sql-tutorial.html'>sql</a></li><li><a href='/python3/python3-tutorial.html'>python3</a></li><li><a href='/python/python-tutorial.html'>python</a></li><li><a href='/vue2/vue-tutorial.html'>vue2</a></li><li><a href='/nodejs/nodejs-tutorial.html'>nodejs</a></li><li><a href='/regexp/regexp-tutorial.html'>regexp</a></li><li><a href='/xpath/xpath-tutorial.html'>xpath</a></li><li><a href='/svn/svn-tutorial.html'>svn</a></li></ul>
+			<ul class="mobile-nav">
+				<li><a href="//www.runoob.com/">首页</a></li>
+				<li><a href="/html/html-tutorial.html">HTML</a></li>
+				<li><a href="/css/css-tutorial.html">CSS</a></li>
+				<li><a href="/js/js-tutorial.html">JS</a></li>
+				<li><a href="/browser-history">本地书签</a></li>
+				<a href="javascript:void(0)" class="search-reveal">Search</a> 
+			</ul>
+			
+		</div>
+	</div>
+</div><!--  内容  -->
+<div class="container main">
+	<!-- 中间 -->
+	<div class="row">
+	
+<div class="col left-column">
+	<div class="tab">Python 3 教程	<a data-cate="124" href="javascript:void(0);" title="夜间模式" id="moon"><i class="fa fa-moon-o" aria-hidden="true" style="font-size: 1.4em;float: right;margin: 4px 6px 0;"></i></a>
+	<a data-cate="124" style="display:none;" href="javascript:void(0);" title="日间模式" id="sun"><i class="fa fa-sun-o" aria-hidden="true" style="font-size: 1.4em;float: right;margin: 4px 6px 0;"></i></a>
+	</div>
+	<div class="sidebar-box gallery-list">
+		<div class="design" id="leftcolumn">
+						<a target="_top" title="Python3 教程" href="/python3/python3-tutorial.html">
+			Python3 教程			</a>
+			<a target="_top" title=" Python3 简介" href="python3-intro.html"> Python3 简介 </a>
+<a target="_top" title=" Python3 环境搭建" href="python3-install.html"> Python3 环境搭建</a>
+<a target="_top" title=" Python3 基础语法" href="python3-basic-syntax.html"> Python3 基础语法 </a>
+<a target="_top" title=" Python3 基本数据类型" href="python3-data-type.html"> Python3 基本数据类型 </a>			<a target="_top" title="Python3 解释器" href="/python3/python3-interpreter.html">
+			Python3 解释器			</a>
+						<a target="_top" title="Python3 注释" href="/python3/python3-comment.html">
+			Python3 注释			</a>
+			<a target="_top" title="Python3 运算符" href="python3-basic-operators.html"> Python3 运算符 </a>			<a target="_top" title="Python3 数字(Number)" href="/python3/python3-number.html">
+			Python3 数字(Number)			</a>
+						<a target="_top" title="Python3 字符串" href="/python3/python3-string.html">
+			Python3 字符串			</a>
+						<a target="_top" title="Python3 列表" href="/python3/python3-list.html">
+			Python3 列表			</a>
+			<a target="_top" title="Python3 元组" href="python3-tuple.html"> Python3 元组 </a>
+<a target="_top" title="Python3 字典" href="python3-dictionary.html"> Python3 字典</a>
+<a target="_top" title="Python3 集合" href="python3-set.html"> Python3 集合</a>			<a target="_top" title="Python3 编程第一步" href="/python3/python3-step1.html">
+			Python3 编程第一步			</a>
+						<a target="_top" title="Python3 条件控制" href="/python3/python3-conditional-statements.html">
+			Python3 条件控制			</a>
+						<a target="_top" title="Python3 循环语句" href="/python3/python3-loop.html">
+			Python3 循环语句			</a>
+			<a target="_top" title="Python3 迭代器与生成器" href="python3-iterator-generator.html"> Python3 迭代器与生成器</a>			<a target="_top" title="Python3 函数" href="/python3/python3-function.html">
+			Python3 函数			</a>
+						<a target="_top" title="Python3 数据结构" href="/python3/python3-data-structure.html">
+			Python3 数据结构			</a>
+						<a target="_top" title="Python3 模块" href="/python3/python3-module.html">
+			Python3 模块			</a>
+						<a target="_top" title="Python3 输入和输出" href="/python3/python3-inputoutput.html">
+			Python3 输入和输出			</a>
+			<a target="_top" title="Python3 File" href="python3-file-methods.html"> Python3 File </a>
+<a target="_top" title="Python3 OS" href="python3-os-file-methods.html"> Python3 OS </a>			<a target="_top" title="Python3 错误和异常" href="/python3/python3-errors-execptions.html">
+			Python3 错误和异常			</a>
+						<a target="_top" title="Python3 面向对象" href="/python3/python3-class.html">
+			Python3 面向对象			</a>
+			<a target="_top" title=" Python3 命名空间/作用域" href="/python3/python3-namespace-scope.html"> Python3 命名空间/作用域</a>			<a target="_top" title="Python3 标准库概览" href="/python3/python3-stdlib.html">
+			Python3 标准库概览			</a>
+						<a target="_top" title="Python3 实例" href="/python3/python3-examples.html">
+			Python3 实例			</a>
+			<a target="_blank" title="Python 测验" href="/quiz/python-quiz.html"> Python 测验 </a>
+<br><h2 class="left"><span class="left_h2">Python3</span> 高级教程</h2>			<a target="_top" title="Python3 正则表达式" href="/python3/python3-reg-expressions.html">
+			Python3 正则表达式			</a>
+						<a target="_top" title="Python3 CGI编程" href="/python3/python3-cgi-programming.html">
+			Python3 CGI编程			</a>
+			<a target="_top" title="Python MySQL - mysql-connector 驱动" href="python-mysql-connector.html">Python3 MySQL(mysql-connector)</a>			<a target="_top" title="Python3 MySQL 数据库连接 &#8211; PyMySQL 驱动" href="/python3/python3-mysql.html">
+			Python3 MySQL(PyMySQL)			</a>
+						<a target="_top" title="Python3 网络编程" href="/python3/python3-socket.html">
+			Python3 网络编程			</a>
+						<a target="_top" title="Python3 SMTP发送邮件" href="/python3/python3-smtp.html">
+			Python3 SMTP发送邮件			</a>
+						<a target="_top" title="Python3 多线程" href="/python3/python3-multithreading.html">
+			Python3 多线程			</a>
+						<a target="_top" title="Python3 XML 解析" href="/python3/python3-xml-processing.html">
+			Python3 XML 解析			</a>
+						<a target="_top" title="Python3 JSON 数据解析" href="/python3/python3-json.html">
+			Python3 JSON			</a>
+						<a target="_top" title="Python3 日期和时间" href="/python3/python3-date-time.html">
+			Python3 日期和时间			</a>
+						<a target="_top" title="Python3 内置函数" href="/python3/python3-built-in-functions.html">
+			Python3 内置函数			</a>
+						<a target="_top" title="Python MongoDB" href="/python3/python-mongodb.html">
+			Python MongoDB			</a>
+						<a target="_top" title="Python uWSGI  安装配置" href="/python3/python-uwsgi.html">
+			Python uWSGI  安装配置			</a>
+				
+		</div>
+	</div>	
+</div>	<div class="col middle-column">
+		
+	
+	<div class="article">
+			<div class="article-heading-ad" style="display: none;">
+		
+		</div>
+		<div class="previous-next-links">
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="###" rel="prev"> Python3 列表</a> </div>
+			<div class="next-design-link"><a href="###" rel="next"> Python3 条件控制</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+		</div>
+		<div class="article-body">
+		
+			<div class="article-intro" id="content">
+			
+			<h1>Python3 编程第一步</h1>
+<p>在前面的教程中我们已经学习了一些 Python3 的基本语法知识，下面我们尝试来写一个斐波纳契数列。</p>
+
+<div class="example"> 
+<h2 class="example">实例(Python 3.0+)</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-comment">#!/usr/bin/python3</span><span class="hl-code">
+ 
+</span><span class="hl-comment"># Fibonacci series: 斐波纳契数列</span><span class="hl-code">
+</span><span class="hl-comment"># 两个元素的总和确定了下一个数</span><span class="hl-code">
+</span><span class="hl-identifier">a</span><span class="hl-code">, </span><span class="hl-identifier">b</span><span class="hl-code"> = </span><span class="hl-number">0</span><span class="hl-code">, </span><span class="hl-number">1</span><span class="hl-code">
+</span><span class="hl-reserved">while</span><span class="hl-code"> </span><span class="hl-identifier">b</span><span class="hl-code"> &lt; </span><span class="hl-number">10</span><span class="hl-code">:
+    </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-identifier">b</span><span class="hl-brackets">)</span><span class="hl-code">
+    </span><span class="hl-identifier">a</span><span class="hl-code">, </span><span class="hl-identifier">b</span><span class="hl-code"> = </span><span class="hl-identifier">b</span><span class="hl-code">, </span><span class="hl-identifier">a</span><span class="hl-code">+</span><span class="hl-identifier">b</span></div>
+</div>
+</div>
+<p>其中代码 <span class="marked">a, b = b, a+b</span> 的计算方式为先计算右边表达式，然后同时赋值给左边，等价于：</p>
+<pre>
+n=b
+m=a+b
+a=n
+b=m
+</pre>
+<p>执行以上程序，输出结果为：</p>
+<pre>
+1
+1
+2
+3
+5
+8
+</pre>
+<p>
+这个例子介绍了几个新特征。
+</p>
+<p>第一行包含了一个复合赋值：变量 a 和 b 同时得到新值 0 和 1。最后一行再次使用了同样的方法，可以看到，右边的表达式会在赋值变动之前执行。右边表达式的执行顺序是从左往右的。</p>
+<p><strong>输出变量值:</strong></p>
+<pre>
+&gt;&gt;&gt; i = 256*256
+&gt;&gt;&gt; print('i 的值为：', i)
+i 的值为： 65536
+</pre>
+<h3>end 关键字</h3>
+<p>关键字end可以用于将结果输出到同一行，或者在输出的末尾添加不同的字符，实例如下：
+</p>
+<div class="example"> 
+<h2 class="example">实例(Python 3.0+)</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-comment">#!/usr/bin/python3</span><span class="hl-code">
+ 
+</span><span class="hl-comment"># Fibonacci series: 斐波纳契数列</span><span class="hl-code">
+</span><span class="hl-comment"># 两个元素的总和确定了下一个数</span><span class="hl-code">
+</span><span class="hl-identifier">a</span><span class="hl-code">, </span><span class="hl-identifier">b</span><span class="hl-code"> = </span><span class="hl-number">0</span><span class="hl-code">, </span><span class="hl-number">1</span><span class="hl-code">
+</span><span class="hl-reserved">while</span><span class="hl-code"> </span><span class="hl-identifier">b</span><span class="hl-code"> &lt; </span><span class="hl-number">1000</span><span class="hl-code">:
+    </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-identifier">b</span><span class="hl-code">, </span><span class="hl-identifier">end</span><span class="hl-code">=</span><span class="hl-quotes">'</span><span class="hl-string">,</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
+    </span><span class="hl-identifier">a</span><span class="hl-code">, </span><span class="hl-identifier">b</span><span class="hl-code"> = </span><span class="hl-identifier">b</span><span class="hl-code">, </span><span class="hl-identifier">a</span><span class="hl-code">+</span><span class="hl-identifier">b</span></div>
+</div>
+</div>
+
+
+<p>执行以上程序，输出结果为：</p>
+<pre>
+1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,
+</pre>			<!-- 其他扩展 -->
+						
+			</div>
+			
+		</div>
+		
+		<div class="previous-next-links">
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="###" rel="prev"> Python3 列表</a> </div>
+			<div class="next-design-link"><a href="###" rel="next"> Python3 条件控制</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+		</div>
+		<!-- 笔记列表 -->
+		<style>
+.wrapper {
+  /*text-transform: uppercase; */
+  background: #ececec;
+  color: #555;
+  cursor: help;
+  font-family: "Gill Sans", Impact, sans-serif;
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+  width: 200px;
+  -webkit-transform: translateZ(0); /* webkit flicker fix */
+  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+}
+
+.wrapper .tooltip {
+  white-space: nowrap;
+  font-size: 14px;
+  text-align: left;
+  background: #96b97d;
+  bottom: 100%;
+  color: #fff;
+  display: block;
+  left: -25px;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 14px;
+  pointer-events: none;
+  position: absolute;
+  
+  -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+       -o-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+.tooltip a {
+	color:#fff;
+}
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.wrapper .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}  
+
+/* CSS Triangles - see Trevor's post */
+.wrapper .tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #96b97d 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 20%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+.wrapper .tooltip1 {
+	margin-left: 50px;
+	padding-top: 0px;
+}
+/*
+.wrapper:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+*/
+/* IE can just show/hide with no transition */
+.lte8 .wrapper .tooltip {
+  display: none;
+}
+
+.lte8 .wrapper:hover .tooltip {
+  display: block;
+}
+
+</style>
+
+<div class="title" id="comments">
+	<h2 class="">
+    <div class="altblock">
+				<i style="font-size:28px;margin-top: 8px;" class="fa fa-plus-square" aria-hidden="true"></i>
+		    </div>
+    <span class="mw-headline" id="qa_headline">8  篇笔记</span>
+	<span class="mw-headline" id="user_add_note" style="float:right;line-height: 62px;padding-right: 14px;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>  写笔记</span>
+    </h2>
+</div>
+
+<div id="postcomments" style="display:none;">
+	<ol class="commentlist">
+		<li class="comment even thread-even depth-1" id="comment-15917"><span class="comt-f">#8</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;cnjc1855</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;133***31855@189.cn</p></div><div id="runoobvote-id-15917" data-commid="15917" class="upvotejs"><a class="upvote"></a> <span class="count">60</span></div></div><div class="comt-main" id="div-comment-15917"><p>print() sep 参数使用：</p>
+<pre>&gt;&gt;&gt; a=10;b=388;c=98
+&gt;&gt;&gt; print(a,b,c,sep='@')
+10@388@98</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">cnjc1855</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;cnjc1855</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;133***31855@189.cn</p></div></span>3年前 (2017-08-06)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-17478"><span class="comt-f">#7</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;hackmeng</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;715***8@qq.com</p></div><div id="runoobvote-id-17478" data-commid="17478" class="upvotejs"><a class="upvote"></a> <span class="count">37</span></div></div><div class="comt-main" id="div-comment-17478"><p>看了一下，目前还没有把递归单独拿出来讲解</p>
+
+<p>下面使用递归方式求斐波纳契数列</p>
+
+<p>其实递归就是函数内部调用自身。</p>
+
+<p>使用 <span class="marked">print(fab(num))  #num</span> 是一个数字,可用递归方式求输入数字的斐波纳契结果</p>
+
+<pre>def fab(n):
+    if n&lt;1:
+        print('输入有误！')
+        return -1    
+    if n==1 or n==2:
+        return 1    
+    else:
+        return fab(n-1)+fab(n-2)</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">hackmeng</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;hackmeng</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;715***8@qq.com</p></div></span>3年前 (2017-09-13)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-21433"><span class="comt-f">#6</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;月夜面尊</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Han***Coding@foxmail.com</p></div><div id="runoobvote-id-21433" data-commid="21433" class="upvotejs"><a class="upvote"></a> <span class="count">104</span></div></div><div class="comt-main" id="div-comment-21433"><p>楼上说用递归的，单纯说递归还好，其实递归在很大程度上牺牲了空间换取了可读性。每次调用递归函数的时候都会创建一个函数栈，如果递归深度过大，则会造成溢出状况。原文中使用a,b = b,a+b 方法求斐波那契数列，占用空间少，来回只有两个变量的空间占用，很方便。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">月夜面尊</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;月夜面尊</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Han***Coding@foxmail.com</p></div></span>2年前 (2017-12-10)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-23605"><span class="comt-f">#5</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;leviyb</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;lev***@163.com</p></div><div id="runoobvote-id-23605" data-commid="23605" class="upvotejs"><a class="upvote"></a> <span class="count">13</span></div></div><div class="comt-main" id="div-comment-23605"><p>楼上给出了求取斐波那契数列第n项的方法,利用列表可以将前20项输出.但是递归算法重复计算太多,基本计算到第40项就卡住了,太浪费资源,利用列表记录n-1项,可以很大程度上减少重复计算量.利用字典记录也可以实现相同运算.</p>
+
+<pre>n=int(input('请输入一个整数:'))
+def fab(n):
+    if n&lt;1:
+        print('输入有误！')
+        return -1    
+    if n==1 or n==2:
+        return 1
+    else:
+        return fab(n-1)+fab(n-2)
+result=[]
+for i in range(1,n+1):
+    result.append(fab(i))
+
+print(result)
+
+n=int(input('请输入一个整数:')) 
+dic = {0:0,1:1}
+def fib(n):
+    if n in dic:
+        return dic[n]
+    else:
+        temp = fib(n-1)+fib(n-2)
+        dic[n] = temp
+        return temp
+for i in range(n):
+    print(fib(i+1),end=" " )</pre>
+<div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">leviyb</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;leviyb</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;lev***@163.com</p></div></span>2年前 (2018-01-28)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-29064"><span class="comt-f">#4</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;JasonLiu</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;wsl***un1@163.com</p></div><div id="runoobvote-id-29064" data-commid="29064" class="upvotejs"><a class="upvote"></a> <span class="count">2</span></div></div><div class="comt-main" id="div-comment-29064"><pre># r.py
+import sys,getopt
+
+#递归算法 填充斐波拉契数列
+x,y=0,1
+f_len,f_max=[],[]
+f_len.append(x);f_len.append(y)
+f_max.append(x);f_max.append(y)
+
+#按最大个数填充
+def Fsqe_Len(n):
+&nbsp;&nbsp;&nbsp;&nbsp;if len(f_len)&lt;n:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fsqe_Len(n-1)
+&nbsp;&nbsp;&nbsp;&nbsp;m=f_len[n-1]+f_len[n-2]
+&nbsp;&nbsp;&nbsp;&nbsp;f_len.append(m)
+&nbsp;&nbsp;&nbsp;&nbsp;
+#按最大值填充
+def Fsqe_Max(fmx):
+&nbsp;&nbsp;&nbsp;&nbsp;fmlen=len(f_max)-1
+&nbsp;&nbsp;&nbsp;&nbsp;if f_max[fmlen]&gt;fmx:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;del f_max[fmlen]
+&nbsp;&nbsp;&nbsp;&nbsp;else:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m=f_max[fmlen-1]+f_max[fmlen]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f_max.append(m)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fsqe_Max(fmx)
+&nbsp;&nbsp;&nbsp;&nbsp;
+lens=int(input('Fsqe_Len 输入最大个数：'))
+maxs=int(input('Fsqe_Max 输入最大值：'))
+if __name__ == '__main__':
+&nbsp;&nbsp;&nbsp;&nbsp;Fsqe_Len(lens)
+&nbsp;&nbsp;&nbsp;&nbsp;Fsqe_Max(maxs)
+&nbsp;&nbsp;&nbsp;&nbsp;print(f_len)
+&nbsp;&nbsp;&nbsp;&nbsp;print(f_max)</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">JasonLiu</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;JasonLiu</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;wsl***un1@163.com</p></div></span>2年前 (2018-07-03)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-37610"><span class="comt-f">#3</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Quan</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;460***939@qq.com</p></div><div id="runoobvote-id-37610" data-commid="37610" class="upvotejs"><a class="upvote"></a> <span class="count">6</span></div></div><div class="comt-main" id="div-comment-37610"><pre># 取斐波那契数列第 n 项也可不必用递归
+# 非递归算法求解第n项数斐波那契数列
+a, b, i = 0, 1, 0
+result = [ ]
+n = int(input('输入一个大于 0 的整数: '))
+while i &lt; n:
+    result.append(b)
+    a, b = b, a+b
+    i += 1
+print(result[n-1])</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Quan</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Quan</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;460***939@qq.com</p></div></span>1年前 (2018-12-01)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-44459"><span class="comt-f">#2</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Tikiten</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;176***2852@qq.com</p></div><div id="runoobvote-id-44459" data-commid="44459" class="upvotejs"><a class="upvote"></a> <span class="count">34</span></div></div><div class="comt-main" id="div-comment-44459"><p>关于递归和两个变量计算斐波那契：</p>
+
+<pre>import time
+#计算递归斐波那契时间消耗
+n=int(input('请输入一个整数:'))
+start = time.time()
+def fab(n):
+    if n&lt;1:
+        print('输入有误！')
+        return -1    
+    if n==1 or n==2:
+        return 1    
+    else:
+        return fab(n-1)+fab(n-2)
+print(fab(n))
+end = time.time()
+print("运行时间:%.2f秒"%(end-start))
+#计算两个变量时间消耗
+start = time.time()
+a, b = 0, 1
+cn = 1
+while cn &lt; n:
+    a, b = b, a+b
+    cn += 1
+print(b)
+end = time.time()
+print("运行时间:%.2f秒"%(end-start))</pre>
+<p>结果如下：</p>
+
+<pre>请输入一个整数:35
+9227465
+运行时间:3.37秒
+9227465
+运行时间:0.00秒</pre>
+<p>大于 30 以后两种方法的时间对比就很明显了，所以教程的方法还是省时省空间的。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Tikiten</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Tikiten</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;176***2852@qq.com</p></div></span>10个月前 (07-10)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-45098"><span class="comt-f">#1</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;我信罪得赦免</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;201***9962@qq.com</p></div><div id="runoobvote-id-45098" data-commid="45098" class="upvotejs"><a class="upvote"></a> <span class="count">40</span></div></div><div class="comt-main" id="div-comment-45098"><p>接力关于递归和循环，这里采用尾递归的方法，不需要保存额外的栈帧，既保证了运行效率，又具有可读性。</p>
+
+<pre>#尾递归算法实现
+import time
+n=int(input('请输入一个整数:'))
+a=0
+b=1
+start = time.time()
+def F(n,a,b):
+ if n==0:
+    return a
+ return F(n-1,b,a+b)
+print(F(n,a,b))
+end = time.time()
+print("运行时间:%.2f秒"%(end-start))</pre>
+<p>测试结果为：</p>
+<pre>请输入一个整数:35
+9227465
+运行时间:0.00秒</pre>
+<div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">我信罪得赦免</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;我信罪得赦免</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;201***9962@qq.com</p></div></span>10个月前 (07-27)</div></div></li><!-- #comment-## -->
+	</ol>
+	<div class="pagenav">
+			</div>
+</div>
+
+
+
+
+
+
+<link rel="stylesheet" href="/wp-content/themes/runoob/assets/css/qa.css?1.43">
+
+
+
+
+
+
+		<div class="sidebar-box ">
+				<div id="ad-336280">
+
+		<style>	
+.responsive_ad1 { display:none; }
+@media(min-width: 800px) { .responsive_ad1 {  display:block;margin:0 auto;} }
+
+</style>
+
+<!-- 移动版 自动调整 -->
+<ins class="adsbygoogle responsive_ad1" style="min-width:400px;max-width:728px;width:100%;height:90px;" data-ad-client="ca-pub-5751451760833794" data-ad-slot="1691338467" data-full-width-responsive="true"></ins>
+
+		</div>
+				</div>
+		
+	</div>
+</div>
+	
+
+<!-- 右边栏 -->
+<div class="fivecol last right-column">
+<!--
+	<div class="tab tab-light-blue" style="text-align: center;">关注微信</div>
+	<div class="sidebar-box">
+		<a href="http://m.runoob.com/" target="_blank"> <img src="http://www.runoob.com/wp-content/themes/w3cschool.cc/assets/img/qrcode.jpg" alt="移动版"> </a>
+		<div class="qqinfo">
+		 <a target="_blank" href="http://jq.qq.com/?_wv=1027&k=dOwwKN" id="qqhref">
+		<img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="菜鸟家族" title="菜鸟家族"></a>
+		<span>(群号：<span id="qqid">365967760</span>)</span>
+		</div>
+		
+	</div>
+	-->
+<style>
+.sidebar-tree .double-li {
+	width:300px;
+}
+.sidebar-tree .double-li li {
+    width: 44%;
+    line-height: 1.5em;
+    border-bottom: 1px solid #ccc;
+    float: left;
+    display: inline;
+}
+</style>
+
+	
+		
+	<br>
+	
+	
+</div></div>
+
+</div>
+
+
+
+
+<!-- 反馈对话框开始 -->
+
+<link rel="stylesheet" href="/wp-content/themes/runoob/assets/feedback/stable/2.0/feedback.css?1.0">
+
+<!-- 反馈对话框结束 -->
+<button class="feedback-btn feedback-btn-gray">反馈/建议</button>
+<!-- 底部 -->
+
+
+
+  
+
+  <div class="hide_box"></div>
+    
+  <div id="testClick"></div>
+ <div style="display:none;">
+ 
+ 
+</div>
+
+<style>
+ol,ul{list-style:none}.cd-switcher a{text-decoration:none;outline:0}.cd-switcher a:hover{text-decoration:underline}a:focus{outline:0;-moz-outline:0}.main_nav{width:300px;height:60px;margin:60px auto 10px auto}.main_nav li{float:left;width:60px;margin-right:10px;font-size:16px;padding:.6em 1em;border-radius:3em;background:#2f889a;text-align:center}.main_nav li a{color:#fff}.errtip{background-color:#fceaea;color:#db5353;padding:8px 15px;font-size:14px;border:1px solid #fc9797;border-radius:5px}.cd-user-modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(52,54,66,0.9);z-index:3;overflow-y:auto;cursor:pointer;visibility:hidden;opacity:0;-webkit-transition:opacity .3s 0,visibility 0 .3s;-moz-transition:opacity .3s 0,visibility 0 .3s;transition:opacity .3s 0,visibility 0 .3s}.cd-user-modal.is-visible{visibility:visible;opacity:1;-webkit-transition:opacity .3s 0,visibility 0 0;-moz-transition:opacity .3s 0,visibility 0 0;transition:opacity .3s 0,visibility 0 0}.cd-user-modal.is-visible .cd-user-modal-container{-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0)}.cd-user-modal-container{position:relative;width:90%;max-width:500px;background:#FFF;margin:3em auto 4em;cursor:auto;border-radius:.25em;-webkit-transform:translateY(-30px);-moz-transform:translateY(-30px);-ms-transform:translateY(-30px);-o-transform:translateY(-30px);transform:translateY(-30px);-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;transition-property:transform;-webkit-transition-duration:.3s;-moz-transition-duration:.3s;transition-duration:.3s}.cd-user-modal-container .cd-switcher:after{content:"";display:table;clear:both}.cd-user-modal-container .cd-switcher li{width:50%;float:left;text-align:center}.cd-user-modal-container .cd-switcher li:first-child a{border-radius:.25em 0 0 0}.cd-user-modal-container .cd-switcher li:last-child a{border-radius:0 .25em 0 0}.cd-user-modal-container .cd-switcher a{font-size:1.2em;font-weight:bold;display:block;width:100%;height:50px;line-height:50px;background:#e8f1e2;color:#96b880}.cd-user-modal-container .cd-switcher a.selected{background:#FFF;color:#505260}@media only screen and (min-width:600px){.cd-user-modal-container{margin:4em auto}.cd-user-modal-container .cd-switcher a{height:70px;line-height:70px}}.cd-form{padding:1.4em}.cd-form .fieldset{position:relative;margin:1.4em 0}.cd-form .fieldset:first-child{margin-top:0}.cd-form .fieldset:last-child{margin-bottom:0}.cd-form label{font-size:16px;font-size:.875rem}.cd-form label.image-replace{display:inline-block;position:absolute;left:15px;top:50%;bottom:auto;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%);transform:translateY(-50%);height:20px;width:20px;overflow:hidden;text-indent:100%;white-space:nowrap;color:transparent;text-shadow:none;background-repeat:no-repeat;background-position:50% 0}.cd-form label.cd-username{background-image:url("/wp-content/themes/runoob/assets/img/cd-icon-username.svg")}.cd-form label.cd-email{background-image:url("/wp-content/themes/runoob/assets/img/cd-icon-email.svg")}.cd-form label.cd-password{background-image:url("/wp-content/themes/runoob/assets/img/cd-icon-password.svg")}.cd-form input{margin:0;padding:0;border-radius:.25em}.cd-form input.full-width{width:80%}.cd-form input.full-width2{width:94%}.cd-form input.has-padding{padding:12px 20px 12px 50px}.cd-form input.has-border{border:1px solid #d2d8d8;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none}.cd-form input.has-border:focus{border-color:#98b880;box-shadow:0 0 5px rgba(52,54,66,0.1);outline:0}.cd-form input.has-error{border:1px solid #d76666}.cd-form input[type=password]{padding-right:65px}.cd-form input[type=submit]{padding:16px 0;cursor:pointer;background:#96b97d;color:#FFF;font-weight:bold;border:0;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none;font-size:1.2em;font-weight:bold}.no-touch .cd-form input[type=submit]:hover,.no-touch .cd-form input[type=submit]:focus{background:#3599ae;outline:0}@media only screen and (min-width:600px){.cd-form{padding:2em}.cd-form .fieldset{margin:2em 0}.cd-form .fieldset:first-child{margin-top:0}.cd-form .fieldset:last-child{margin-bottom:0}.cd-form input.has-padding{padding:16px 20px 16px 50px}.cd-form input[type=submit]{padding:16px 0}}.cd-close-form{display:block;position:absolute;width:40px;height:40px;right:0;top:-40px;background:url("/wp-content/themes/runoob/assets/img/cd-icon-close.svg") no-repeat center center;text-indent:100%;white-space:nowrap;overflow:hidden}@media only screen and (min-width:1170px){}#cd-login,#cd-signup,#cd-reset-password{display:none}#cd-login.is-selected,#cd-signup.is-selected,#cd-reset-password.is-selected{display:block}
+</style>
+ 
+
+
+</body>
+</html>

@@ -1,0 +1,584 @@
+﻿<!Doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta property="qc:admins" content="465267610762567726375">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vue.js 计算属性 | 菜鸟教程</title>
+
+  <link rel='dns-prefetch' href='//s.w.org'>
+
+<meta name="keywords" content="Vue.js 计算属性">
+<meta name="description" content="Vue.js 计算属性 计算属性关键词: computed。 计算属性在处理一些复杂逻辑时是很有用的。 可以看下以下反转字符串的例子：   实例 1  [mycode3 type=&#039;html&#039;]    {{ message.split(&#039;&#039;).reverse().join(&#039;&#039;) }}  [/mycode3]   尝试一下 »   实例 1 中模板变的很复杂起来，也不容易看懂理..">
+		
+	
+	<link rel="stylesheet" href="/wp-content/themes/runoob/style.css?v=1.155" type="text/css" media="all">	
+		
+  <!--[if gte IE 9]><!-->
+  
+  <!--<![endif]-->
+  <!--[if lt IE 9]>
+     <script src="https://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
+     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <![endif]-->
+  
+  <meta name="apple-mobile-web-app-title" content="菜鸟教程">
+</head>
+<body>
+
+<!--  头部 -->
+<div class="container logo-search">
+
+  
+
+  
+</div>
+
+
+<!-- 导航栏 -->
+<!-- 导航栏 -->
+<div class="container navigation">
+	<div class="row">
+		<div class="col nav">
+			<ul class="pc-nav"><li><a href='/linux/linux-tutorial.html'>linux</a></li><li><a href='/markdown/md-tutorial.html'>markdown</a></li><li><a href='/docker/docker-tutorial.html'>docker</a></li><li><a href='/mysql/mysql-tutorial.html'>mysql</a></li><li><a href='/sql/sql-tutorial.html'>sql</a></li><li><a href='/python3/python3-tutorial.html'>python3</a></li><li><a href='/python/python-tutorial.html'>python</a></li><li><a href='/vue2/vue-tutorial.html'>vue2</a></li><li><a href='/nodejs/nodejs-tutorial.html'>nodejs</a></li><li><a href='/regexp/regexp-tutorial.html'>regexp</a></li><li><a href='/xpath/xpath-tutorial.html'>xpath</a></li><li><a href='/svn/svn-tutorial.html'>svn</a></li></ul>
+			<ul class="mobile-nav">
+				<li><a href="//www.runoob.com/">首页</a></li>
+				<li><a href="/html/html-tutorial.html">HTML</a></li>
+				<li><a href="/css/css-tutorial.html">CSS</a></li>
+				<li><a href="/js/js-tutorial.html">JS</a></li>
+				<li><a href="/browser-history">本地书签</a></li>
+				<a href="javascript:void(0)" class="search-reveal">Search</a> 
+			</ul>
+			
+		</div>
+	</div>
+</div><!--  内容  -->
+<div class="container main">
+	<!-- 中间 -->
+	<div class="row">
+	
+<div class="col left-column">
+	<div class="tab">Vue.js 教程	<a data-cate="210" href="javascript:void(0);" title="夜间模式" id="moon"><i class="fa fa-moon-o" aria-hidden="true" style="font-size: 1.4em;float: right;margin: 4px 6px 0;"></i></a>
+	<a data-cate="210" style="display:none;" href="javascript:void(0);" title="日间模式" id="sun"><i class="fa fa-sun-o" aria-hidden="true" style="font-size: 1.4em;float: right;margin: 4px 6px 0;"></i></a>
+	</div>
+	<div class="sidebar-box gallery-list">
+		<div class="design" id="leftcolumn">
+						<a target="_top" title="Vue.js 教程" href="/vue2/vue-tutorial.html">
+			Vue.js 教程			</a>
+						<a target="_top" title="Vue.js 安装" href="/vue2/vue-install.html">
+			Vue.js 安装			</a>
+			<a target="_top" title="Vue.js 目录结构" href="/vue2/vue-directory-structure.html"> Vue.js 目录结构</a>
+<a target="_top" title="Vue.js 起步" href="/vue2/vue-start.html"> Vue.js 起步</a>			<a target="_top" title="Vue.js 模板语法" href="/vue2/vue-template-syntax.html">
+			Vue.js 模板语法			</a>
+						<a target="_top" title="Vue.js 条件语句" href="/vue2/vue-if.html">
+			Vue.js 条件语句			</a>
+			<a target="_top" title="Vue.js 循环语句" href="/vue2/vue-loop.html">
+			Vue.js 循环语句			</a>			<a target="_top" title="Vue.js 计算属性" href="/vue2/vue-computed.html">
+			Vue.js 计算属性			</a>
+			<a target="_top" title="Vue.js 监听属性" href="/vue2/vue-watch.html"> Vue.js 监听属性</a>			<a target="_top" title="Vue.js 样式绑定" href="/vue2/vue-class-style.html">
+			Vue.js 样式绑定			</a>
+						<a target="_top" title="Vue.js 事件处理器" href="/vue2/vue-events.html">
+			Vue.js 事件处理器			</a>
+						<a target="_top" title="Vue.js 表单" href="/vue2/vue-forms.html">
+			Vue.js 表单			</a>
+						<a target="_top" title="Vue.js 组件" href="/vue2/vue-component.html">
+			Vue.js 组件			</a>
+						<a target="_top" title="Vue.js 自定义指令" href="/vue2/vue-custom-directive.html">
+			Vue.js 自定义指令			</a>
+						<a target="_top" title="Vue.js 路由" href="/vue2/vue-routing.html">
+			Vue.js 路由			</a>
+						<a target="_top" title="Vue.js 过渡 &#038; 动画" href="/vue2/vue-transitions.html">
+			Vue.js 过渡 & 动画			</a>
+						<a target="_top" title="Vue.js 混入" href="/vue2/vue-mixins.html">
+			Vue.js 混入			</a>
+			<a target="_top" title="Vue.js Ajax(axios)" href="/vue2/vuejs-ajax-axios.html">Vue.js  Ajax(axios)</a>			<a target="_top" title="Vue.js  Ajax(vue-resource)" href="/vue2/vuejs-ajax.html">
+			Vue.js  Ajax(vue-resource)			</a>
+						<a target="_top" title="Vue.js 响应接口" href="/vue2/vuejs-reactive.html">
+			Vue.js 响应接口			</a>
+						<a target="_top" title="Vue.js 实例" href="/vue2/vue-examples.html">
+			Vue.js 实例			</a>
+				
+		</div>
+	</div>	
+</div>	<div class="col middle-column">
+		
+	
+	<div class="article">
+			<div class="article-heading-ad" style="display: none;">
+		
+		</div>
+		<div class="previous-next-links">
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="###" rel="prev"> Vue.js 目录结构</a> </div>
+			<div class="next-design-link"><a href="###" rel="next"> Vue.js 样式绑定</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+		</div>
+		<div class="article-body">
+		
+			<div class="article-intro" id="content">
+			
+			<h1>Vue.js 计算属性</h1>
+<p>计算属性关键词: computed。</p>
+<p>计算属性在处理一些复杂逻辑时是很有用的。</p>
+<p>可以看下以下反转字符串的例子：</p>
+
+<div class="example">
+<h2 class="example">实例 1</h2>
+<div class="example_code">
+<div class="hl-main"><span class="hl-brackets">&lt;</span><span class="hl-reserved">div</span><span class="hl-code"> </span><span class="hl-var">id</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">app</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+  {{ message.split('').reverse().join('') }}
+</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">div</span><span class="hl-brackets">&gt;</span></div>
+</div>
+<br>
+<a target="_blank" href="/try/try.php?filename=vue2-str-reverse1" class="tryitbtn">尝试一下 »</a>
+
+</div>
+<p>实例 1 中模板变的很复杂起来，也不容易看懂理解。</p>
+<p>接下来我们看看使用了计算属性的实例：</p>
+
+<div class="example">
+<h2 class="example">实例 2</h2>
+<div class="example_code">
+<div class="hl-main"><span class="hl-brackets">&lt;</span><span class="hl-reserved">div</span><span class="hl-code"> </span><span class="hl-var">id</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">app</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+  </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span><span class="hl-code">原始字符串: {{ message }}</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+  </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span><span class="hl-code">计算后反转字符串: {{ reversedMessage }}</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">div</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+ 
+</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+var vm = new Vue({
+  el: '#app',
+  data: {
+    message: 'Runoob!'
+  },
+  computed: {
+    // 计算属性的 getter
+    reversedMessage: function () {
+      // `this` 指向 vm 实例
+      return this.message.split('').reverse().join('')
+    }
+  }
+})
+</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span></div>
+</div>
+<br>
+<a target="_blank" href="/try/try.php?filename=vue2-str-reverse2" class="tryitbtn">尝试一下 »</a>
+
+</div>
+<p>实例 2 中声明了一个计算属性 reversedMessage 。</p>
+<p>提供的函数将用作属性 vm.reversedMessage 的 getter 。</p>
+<p>vm.reversedMessage 依赖于 vm.message，在 vm.message 发生改变时，vm.reversedMessage 也会更新。</p>
+<hr>
+<h2>computed vs methods</h2>
+<p>我们可以使用 methods 来替代 computed，效果上两个都是一样的，但是 computed 是基于它的依赖缓存，只有相关依赖发生改变时才会重新取值。而使用 methods ，在重新渲染的时候，函数总会重新调用执行。
+</p>
+<div class="example">
+<h2 class="example">实例 3</h2>
+<div class="example_code">
+<div class="hl-main"><span class="hl-identifier">methods</span><span class="hl-code">: </span><span class="hl-brackets">{</span><span class="hl-code">
+  </span><span class="hl-identifier">reversedMessage2</span><span class="hl-code">: </span><span class="hl-reserved">function</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-reserved">this</span><span class="hl-code">.</span><span class="hl-identifier">message</span><span class="hl-code">.</span><span class="hl-identifier">split</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">.</span><span class="hl-identifier">reverse</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">.</span><span class="hl-identifier">join</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
+  </span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-brackets">}</span></div>
+</div>
+<br>
+<a target="_blank" href="/try/try.php?filename=vue2-str-reverse3" class="tryitbtn">尝试一下 »</a>
+
+</div>
+<p>可以说使用 computed 性能会更好，但是如果你不希望缓存，你可以使用 methods 属性。</p>
+
+<hr>
+<h2>computed setter</h2>
+<p>computed 属性默认只有 getter ，不过在需要时你也可以提供一个 setter ： </p>
+<div class="example">
+<h2 class="example">实例 4</h2>
+<div class="example_code">
+<div class="hl-main"><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">vm</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">Vue</span><span class="hl-brackets">(</span><span class="hl-brackets">{</span><span class="hl-code">
+  </span><span class="hl-identifier">el</span><span class="hl-code">: </span><span class="hl-quotes">'</span><span class="hl-string">#app</span><span class="hl-quotes">'</span><span class="hl-code">,
+  </span><span class="hl-identifier">data</span><span class="hl-code">: </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-identifier">name</span><span class="hl-code">: </span><span class="hl-quotes">'</span><span class="hl-string">Google</span><span class="hl-quotes">'</span><span class="hl-code">,
+    </span><span class="hl-identifier">url</span><span class="hl-code">: </span><span class="hl-quotes">'</span><span class="hl-string">http://www.google.com</span><span class="hl-quotes">'</span><span class="hl-code">
+  </span><span class="hl-brackets">}</span><span class="hl-code">,
+  </span><span class="hl-identifier">computed</span><span class="hl-code">: </span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-identifier">site</span><span class="hl-code">: </span><span class="hl-brackets">{</span><span class="hl-code">
+      </span><span class="hl-comment">//</span><span class="hl-comment"> getter</span><span class="hl-comment"></span><span class="hl-code">
+      </span><span class="hl-identifier">get</span><span class="hl-code">: </span><span class="hl-reserved">function</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+        </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-reserved">this</span><span class="hl-code">.</span><span class="hl-identifier">name</span><span class="hl-code"> + </span><span class="hl-quotes">'</span><span class="hl-string"> </span><span class="hl-quotes">'</span><span class="hl-code"> + </span><span class="hl-reserved">this</span><span class="hl-code">.</span><span class="hl-identifier">url</span><span class="hl-code">
+      </span><span class="hl-brackets">}</span><span class="hl-code">,
+      </span><span class="hl-comment">//</span><span class="hl-comment"> setter</span><span class="hl-comment"></span><span class="hl-code">
+      </span><span class="hl-identifier">set</span><span class="hl-code">: </span><span class="hl-reserved">function</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-identifier">newValue</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+        </span><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">names</span><span class="hl-code"> = </span><span class="hl-identifier">newValue</span><span class="hl-code">.</span><span class="hl-identifier">split</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string"> </span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
+        </span><span class="hl-reserved">this</span><span class="hl-code">.</span><span class="hl-identifier">name</span><span class="hl-code"> = </span><span class="hl-identifier">names</span><span class="hl-brackets">[</span><span class="hl-number">0</span><span class="hl-brackets">]</span><span class="hl-code">
+        </span><span class="hl-reserved">this</span><span class="hl-code">.</span><span class="hl-identifier">url</span><span class="hl-code"> = </span><span class="hl-identifier">names</span><span class="hl-brackets">[</span><span class="hl-identifier">names</span><span class="hl-code">.</span><span class="hl-identifier">length</span><span class="hl-code"> - </span><span class="hl-number">1</span><span class="hl-brackets">]</span><span class="hl-code">
+      </span><span class="hl-brackets">}</span><span class="hl-code">
+    </span><span class="hl-brackets">}</span><span class="hl-code">
+  </span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-brackets">}</span><span class="hl-brackets">)</span><span class="hl-code">
+</span><span class="hl-comment">//</span><span class="hl-comment"> 调用 setter， vm.name 和 vm.url 也会被对应更新</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-identifier">vm</span><span class="hl-code">.</span><span class="hl-identifier">site</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">菜鸟教程 http://www.runoob.com</span><span class="hl-quotes">'</span><span class="hl-code">;
+</span><span class="hl-builtin">document</span><span class="hl-code">.</span><span class="hl-identifier">write</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">name: </span><span class="hl-quotes">'</span><span class="hl-code"> + </span><span class="hl-identifier">vm</span><span class="hl-code">.</span><span class="hl-identifier">name</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-builtin">document</span><span class="hl-code">.</span><span class="hl-identifier">write</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">&lt;br&gt;</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-builtin">document</span><span class="hl-code">.</span><span class="hl-identifier">write</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">url: </span><span class="hl-quotes">'</span><span class="hl-code"> + </span><span class="hl-identifier">vm</span><span class="hl-code">.</span><span class="hl-identifier">url</span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
+</div>
+<br>
+<a target="_blank" href="/try/try.php?filename=vue2-str-reverse4" class="tryitbtn">尝试一下 »</a>
+
+</div>
+
+<p>从实例运行结果看在运行 vm.site = '菜鸟教程 http://www.runoob.com'; 时，setter 会被调用， vm.name 和 vm.url 也会被对应更新。</p>
+<p><img src="//www.runoob.com/wp-content/uploads/2017/01/D85D293B-FC10-45A6-90BA-F693ECBE8726.jpg"></p>			<!-- 其他扩展 -->
+						
+			</div>
+			
+		</div>
+		
+		<div class="previous-next-links">
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="###" rel="prev"> Vue.js 目录结构</a> </div>
+			<div class="next-design-link"><a href="###" rel="next"> Vue.js 样式绑定</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+		</div>
+		<!-- 笔记列表 -->
+		<style>
+.wrapper {
+  /*text-transform: uppercase; */
+  background: #ececec;
+  color: #555;
+  cursor: help;
+  font-family: "Gill Sans", Impact, sans-serif;
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+  width: 200px;
+  -webkit-transform: translateZ(0); /* webkit flicker fix */
+  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+}
+
+.wrapper .tooltip {
+  white-space: nowrap;
+  font-size: 14px;
+  text-align: left;
+  background: #96b97d;
+  bottom: 100%;
+  color: #fff;
+  display: block;
+  left: -25px;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 14px;
+  pointer-events: none;
+  position: absolute;
+  
+  -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+       -o-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+.tooltip a {
+	color:#fff;
+}
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.wrapper .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}  
+
+/* CSS Triangles - see Trevor's post */
+.wrapper .tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #96b97d 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 20%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+.wrapper .tooltip1 {
+	margin-left: 50px;
+	padding-top: 0px;
+}
+/*
+.wrapper:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+*/
+/* IE can just show/hide with no transition */
+.lte8 .wrapper .tooltip {
+  display: none;
+}
+
+.lte8 .wrapper:hover .tooltip {
+  display: block;
+}
+
+</style>
+
+<div class="title" id="comments">
+	<h2 class="">
+    <div class="altblock">
+				<i style="font-size:28px;margin-top: 8px;" class="fa fa-plus-square" aria-hidden="true"></i>
+		    </div>
+    <span class="mw-headline" id="qa_headline">3  篇笔记</span>
+	<span class="mw-headline" id="user_add_note" style="float:right;line-height: 62px;padding-right: 14px;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>  写笔记</span>
+    </h2>
+</div>
+
+<div id="postcomments" style="display:none;">
+	<ol class="commentlist">
+		<li class="comment even thread-even depth-1" id="comment-39039"><span class="comt-f">#3</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;softfei</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;che***1c@sina.com</p></div><div id="runoobvote-id-39039" data-commid="39039" class="upvotejs"><a class="upvote"></a> <span class="count">131</span></div></div><div class="comt-main" id="div-comment-39039"><p>把代码改了改，应该可以体现 computer 属性“依赖缓存”的概念以及与 method 的差别。如下面代码，cnt 是独立于 vm 对象的变量。在使用 reversedMessage 这个计算属性的时候，第一次会执行代码，得到一个值，以后再使用 reversedMessage 这个计算属性，因为 vm 对象没有发生改变，于是界面渲染就直接用这个值，不再重复执行代码。而 reversedMessage2 没有这个缓存，只要用一次，函数代码就执行一次，于是每次返回值都不一样。
+</p>
+
+<pre>var cnt=1;
+var vm = new Vue({
+  el: '#app',
+  data: {
+    message: 'Runoob!'
+  },
+  computed: {
+    // 计算属性的 getter
+    reversedMessage: function () {
+      // `this` 指向 vm 实例
+      cnt+=1;
+      return cnt+this.message.split('').reverse().join('')
+    }
+  },
+  methods: {
+    reversedMessage2: function () {
+      cnt+=1;
+      return cnt+this.message.split('').reverse().join('')
+    }
+  }
+})</pre>
+
+<p><a target="_blank" href="###" class="tryitbtn" rel="nofollow">尝试一下 »</a></p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">softfei</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;softfei</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;che***1c@sina.com</p></div></span>1年前 (2019-01-16)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-39459"><span class="comt-f">#2</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;挑战者666888</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;358***071@qq.com</p></div><div id="runoobvote-id-39459" data-commid="39459" class="upvotejs"><a class="upvote"></a> <span class="count">44</span></div></div><div class="comt-main" id="div-comment-39459"><p>当你没有使用到计算属性的依赖缓存的时候，可以使用定义方法来代替计算属性，在 methods 里定义一个方法可以实现相同的效果，甚至该方法还可以接受参数，使用起来更灵活。</p>
+
+<pre>&lt;div id ="app"&gt;My Runoob Application
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;原始数据：{{text}}&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- 注意，这里的reversedText是方法，所以要带()--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;变化后数据：{{reversedText()}}&lt;/p&gt;
+&lt;/div&gt;
+&lt;script&gt;
+var app = new Vue({
+&nbsp;&nbsp;&nbsp;&nbsp;el: '#app',
+&nbsp;&nbsp;&nbsp;&nbsp;data: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text:'123,456',
+&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;methods:{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reversedText: function(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return this.text.split(',').reverse().join(',');
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;},
+});&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/script&gt;</pre>
+<p><a target="_blank" href="###" class="tryitbtn" rel="nofollow">尝试一下 »</a></p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">挑战者666888</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;挑战者666888</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;358***071@qq.com</p></div></span>1年前 (2019-01-30)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-46747"><span class="comt-f">#1</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;tjock</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;lxi***tang@gmail.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="###">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-46747" data-commid="46747" class="upvotejs"><a class="upvote"></a> <span class="count">33</span></div></div><div class="comt-main" id="div-comment-46747"><p><strong>computed vs method：</strong></p>
+<p>在vue.js中，有methods和computed两种方式来动态当作方法来用的。</p>
+<ul><li>
+1.首先最明显的不同 就是调用的时候，methods要加上（）
+</li><li>
+2.我们可以使用 methods 来替代 computed，效果上两个都是一样的，但是 computed 是基于它的依赖缓存，只有相关依赖发生改变时才会重新取值。
+</li></ul>
+<p>而使用 methods ，在重新渲染的时候，函数总会重新调用执行。</p>
+<p>为了方便理解，先上一段源码:</p>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;title&lt;/title&gt;
+        &lt;script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;div class="test"&gt;    &lt;!--computed计算属性--&gt;
+            &lt;p&gt;{{now}}&lt;/p&gt;
+            &lt;p&gt;{{now}}&lt;/p&gt;
+            &lt;p&gt;{{now}}&lt;/p&gt;
+            &lt;p&gt;{{now}}&lt;/p&gt;
+            &lt;hr /&gt;            &lt;!--横线分割--&gt;
+&lt;/div&gt;
+        &lt;div class="test2"&gt;   &lt;!--methods方法，注意new（）加了括号--&gt;
+            &lt;p&gt;{{now()}}&lt;/p&gt;
+            &lt;p&gt;{{now()}}&lt;/p&gt;
+            &lt;p&gt;{{now()}}&lt;/p&gt;
+            &lt;p&gt;{{now()}}&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+
+    &lt;script type="text/javascript"&gt;
+        var myVue = new Vue({
+            el: ".test",
+            computed: {
+                now: function() {
+                    var yanshi = 0;
+                    for(var o = 0; o &lt; 2000; o++) {     //延时
+                        for(var q = 0; q &lt; 2000; q++) {
+                            yanshi++;
+                        }
+                    }
+                    return Date.now()
+                }
+            }
+        });
+        var vue2 = new Vue({
+            el: '.test2',
+            methods: {
+                now: function() {
+                    var yanshi = 0;
+                    for(var o = 0; o &lt; 2000; o++) {
+                        for(var q = 0; q &lt; 2000; q++) {
+                            yanshi++;
+                        }
+                    }
+                    return Date.now()
+                }
+            }
+        })
+    &lt;/script&gt;
+
+&lt;/html&gt;</pre>
+
+<p>
+<a target="_blank" class="tryitbtn" href="###" rel="noopener noreferrer nofollow">尝试一下 »</a></p>
+<p>结果如下：</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2014/07/1017580-20170911202610578-1420692115.png"></p>
+<p>运行结果如上，可以看出computed计算属性的话，每次进入页面将一直沿用第一次的信息，不会再触发now，这就是依赖缓存。（有延时的情况下 多次输出时间相同）。</p>
+
+<p>那什么是相关依赖发生改变时才会重新取值呢 比方说 reversedMessage function() 计算属性中调用了 message 变量。</p>
+
+<p>就意味着只要 message 还没有发生改变，多次访问 reversedMessage 计算属性会立即返回之前的计算结果，而不必再次执行函数。</p>
+
+ 
+
+<p>而methods是实时的，在重新渲染时，函数总会重新调用执行，不会缓存，（多次输出时间不同）</p>
+
+ 
+<p>
+可以说使用 computed 性能会更好，但是如果你不希望缓存，你可以使用 methods 属性。</p>
+<p>
+computed 属性默认只有 getter ，不过在需要时你也可以提供一个 setter ：所以其实computed也是可以传参的。</p>
+
+<div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">tjock</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;tjock</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;lxi***tang@gmail.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="###">&nbsp;&nbsp;参考地址</a></p></div></span>8个月前 (09-14)</div></div></li><!-- #comment-## -->
+	</ol>
+	<div class="pagenav">
+			</div>
+</div>
+
+
+
+
+
+
+<link rel="stylesheet" href="/wp-content/themes/runoob/assets/css/qa.css?1.43">
+
+
+
+
+
+
+		<div class="sidebar-box ">
+				<div id="ad-336280">
+
+		<style>	
+.responsive_ad1 { display:none; }
+@media(min-width: 800px) { .responsive_ad1 {  display:block;margin:0 auto;} }
+
+</style>
+
+<!-- 移动版 自动调整 -->
+<ins class="adsbygoogle responsive_ad1" style="min-width:400px;max-width:728px;width:100%;height:90px;" data-ad-client="ca-pub-5751451760833794" data-ad-slot="1691338467" data-full-width-responsive="true"></ins>
+
+		</div>
+				</div>
+		
+	</div>
+</div>
+	
+
+<!-- 右边栏 -->
+<div class="fivecol last right-column">
+<!--
+	<div class="tab tab-light-blue" style="text-align: center;">关注微信</div>
+	<div class="sidebar-box">
+		<a href="http://m.runoob.com/" target="_blank"> <img src="http://www.runoob.com/wp-content/themes/w3cschool.cc/assets/img/qrcode.jpg" alt="移动版"> </a>
+		<div class="qqinfo">
+		 <a target="_blank" href="http://jq.qq.com/?_wv=1027&k=dOwwKN" id="qqhref">
+		<img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="菜鸟家族" title="菜鸟家族"></a>
+		<span>(群号：<span id="qqid">365967760</span>)</span>
+		</div>
+		
+	</div>
+	-->
+<style>
+.sidebar-tree .double-li {
+	width:300px;
+}
+.sidebar-tree .double-li li {
+    width: 44%;
+    line-height: 1.5em;
+    border-bottom: 1px solid #ccc;
+    float: left;
+    display: inline;
+}
+</style>
+
+	
+		
+	<br>
+	
+	
+</div></div>
+
+</div>
+
+
+
+
+<!-- 反馈对话框开始 -->
+
+<link rel="stylesheet" href="/wp-content/themes/runoob/assets/feedback/stable/2.0/feedback.css?1.0">
+
+<!-- 反馈对话框结束 -->
+<button class="feedback-btn feedback-btn-gray">反馈/建议</button>
+<!-- 底部 -->
+
+
+
+  
+
+  <div class="hide_box"></div>
+    
+  <div id="testClick"></div>
+ <div style="display:none;">
+ 
+ 
+</div>
+
+<style>
+ol,ul{list-style:none}.cd-switcher a{text-decoration:none;outline:0}.cd-switcher a:hover{text-decoration:underline}a:focus{outline:0;-moz-outline:0}.main_nav{width:300px;height:60px;margin:60px auto 10px auto}.main_nav li{float:left;width:60px;margin-right:10px;font-size:16px;padding:.6em 1em;border-radius:3em;background:#2f889a;text-align:center}.main_nav li a{color:#fff}.errtip{background-color:#fceaea;color:#db5353;padding:8px 15px;font-size:14px;border:1px solid #fc9797;border-radius:5px}.cd-user-modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(52,54,66,0.9);z-index:3;overflow-y:auto;cursor:pointer;visibility:hidden;opacity:0;-webkit-transition:opacity .3s 0,visibility 0 .3s;-moz-transition:opacity .3s 0,visibility 0 .3s;transition:opacity .3s 0,visibility 0 .3s}.cd-user-modal.is-visible{visibility:visible;opacity:1;-webkit-transition:opacity .3s 0,visibility 0 0;-moz-transition:opacity .3s 0,visibility 0 0;transition:opacity .3s 0,visibility 0 0}.cd-user-modal.is-visible .cd-user-modal-container{-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0)}.cd-user-modal-container{position:relative;width:90%;max-width:500px;background:#FFF;margin:3em auto 4em;cursor:auto;border-radius:.25em;-webkit-transform:translateY(-30px);-moz-transform:translateY(-30px);-ms-transform:translateY(-30px);-o-transform:translateY(-30px);transform:translateY(-30px);-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;transition-property:transform;-webkit-transition-duration:.3s;-moz-transition-duration:.3s;transition-duration:.3s}.cd-user-modal-container .cd-switcher:after{content:"";display:table;clear:both}.cd-user-modal-container .cd-switcher li{width:50%;float:left;text-align:center}.cd-user-modal-container .cd-switcher li:first-child a{border-radius:.25em 0 0 0}.cd-user-modal-container .cd-switcher li:last-child a{border-radius:0 .25em 0 0}.cd-user-modal-container .cd-switcher a{font-size:1.2em;font-weight:bold;display:block;width:100%;height:50px;line-height:50px;background:#e8f1e2;color:#96b880}.cd-user-modal-container .cd-switcher a.selected{background:#FFF;color:#505260}@media only screen and (min-width:600px){.cd-user-modal-container{margin:4em auto}.cd-user-modal-container .cd-switcher a{height:70px;line-height:70px}}.cd-form{padding:1.4em}.cd-form .fieldset{position:relative;margin:1.4em 0}.cd-form .fieldset:first-child{margin-top:0}.cd-form .fieldset:last-child{margin-bottom:0}.cd-form label{font-size:16px;font-size:.875rem}.cd-form label.image-replace{display:inline-block;position:absolute;left:15px;top:50%;bottom:auto;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%);transform:translateY(-50%);height:20px;width:20px;overflow:hidden;text-indent:100%;white-space:nowrap;color:transparent;text-shadow:none;background-repeat:no-repeat;background-position:50% 0}.cd-form label.cd-username{background-image:url("/wp-content/themes/runoob/assets/img/cd-icon-username.svg")}.cd-form label.cd-email{background-image:url("/wp-content/themes/runoob/assets/img/cd-icon-email.svg")}.cd-form label.cd-password{background-image:url("/wp-content/themes/runoob/assets/img/cd-icon-password.svg")}.cd-form input{margin:0;padding:0;border-radius:.25em}.cd-form input.full-width{width:80%}.cd-form input.full-width2{width:94%}.cd-form input.has-padding{padding:12px 20px 12px 50px}.cd-form input.has-border{border:1px solid #d2d8d8;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none}.cd-form input.has-border:focus{border-color:#98b880;box-shadow:0 0 5px rgba(52,54,66,0.1);outline:0}.cd-form input.has-error{border:1px solid #d76666}.cd-form input[type=password]{padding-right:65px}.cd-form input[type=submit]{padding:16px 0;cursor:pointer;background:#96b97d;color:#FFF;font-weight:bold;border:0;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none;font-size:1.2em;font-weight:bold}.no-touch .cd-form input[type=submit]:hover,.no-touch .cd-form input[type=submit]:focus{background:#3599ae;outline:0}@media only screen and (min-width:600px){.cd-form{padding:2em}.cd-form .fieldset{margin:2em 0}.cd-form .fieldset:first-child{margin-top:0}.cd-form .fieldset:last-child{margin-bottom:0}.cd-form input.has-padding{padding:16px 20px 16px 50px}.cd-form input[type=submit]{padding:16px 0}}.cd-close-form{display:block;position:absolute;width:40px;height:40px;right:0;top:-40px;background:url("/wp-content/themes/runoob/assets/img/cd-icon-close.svg") no-repeat center center;text-indent:100%;white-space:nowrap;overflow:hidden}@media only screen and (min-width:1170px){}#cd-login,#cd-signup,#cd-reset-password{display:none}#cd-login.is-selected,#cd-signup.is-selected,#cd-reset-password.is-selected{display:block}
+</style>
+ 
+
+
+</body>
+</html>
